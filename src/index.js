@@ -4,12 +4,18 @@ import "./index.css";
 
 // My first component
 
+function Task(props) {
+	return (
+		<li className="tasks-item">{props.taskName}</li>
+	);
+}
+
 function TasksList() {
 	return (
 		<ul>
-			<li className="tasks-item">Follow Edukasyon.ph on Facebook.</li>
-			<li className="tasks-item">Follow AWS Siklab Pilipinas on Facebook.</li>
-			<li className="tasks-item">Follow Zuitt Coding Bootcamp on Facebook.</li>
+			<Task taskName="Follow Edukasyon.ph on Facebook." />
+			<Task taskName="Follow Edukasyon.ph on Facebook." />
+			<Task taskName="Follow Edukasyon.ph on Facebook." />
 		</ul>
 	);
 }
@@ -29,6 +35,5 @@ function App() {
 		</div>
 	);
 }
-
 
 ReactDOM.render(<App />, document.getElementById("root"));
