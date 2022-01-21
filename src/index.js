@@ -11,18 +11,25 @@ function Task(props) {
 }
 
 function TasksList() {
+	const taskItemsList = [
+		"Follow Edukasyon.ph on Facebook.",
+		"Follow AWS Siklab Pilipinas on Facebook.",
+		"Follow Zuitt Coding Bootcamp on Facebook.",
+	];
+
 	return (
 		<ul>
-			<Task taskName="Follow Edukasyon.ph on Facebook." />
-			<Task taskName="Follow Edukasyon.ph on Facebook." />
-			<Task taskName="Follow Edukasyon.ph on Facebook." />
+			{taskItemsList.map((task, index) => {
+				console.log(task, index);
+				return <Task key={index} taskName={task} />
+			})}
 		</ul>
 	);
 }
 
 function App() {
 	const paraStyle = {
-		"margin-bottom" : "15px"
+		"marginBottom" : "15px"
 	};
 
 	return (
