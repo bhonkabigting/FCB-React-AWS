@@ -11,7 +11,7 @@ function App() {
 	};
 
 	return (
-		<div className="app">
+		<div className="app" placeholder="Create a new task">
 			<header className="app-header">
 				<h1>My Amazing ToDo-List App</h1>
 				<p style={paraStyle}>The most simple and amazing todo-list React app.</p>
